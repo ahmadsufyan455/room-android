@@ -48,7 +48,8 @@ class AddFragment : Fragment() {
             mUserViewModel.addUser(user)
             Toast.makeText(requireContext(), "Successfully added!", Toast.LENGTH_SHORT).show()
             // navigate back
-            findNavController().navigate(R.id.action_addFragment_to_listFragment)
+            //findNavController().navigate(R.id.action_addFragment_to_listFragment)
+            activity?.onBackPressed()
         } else {
             Toast.makeText(requireContext(), "Please fill out all fields.", Toast.LENGTH_SHORT)
                 .show()

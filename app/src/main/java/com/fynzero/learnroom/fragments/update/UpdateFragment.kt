@@ -57,7 +57,8 @@ class UpdateFragment : Fragment() {
             mUserViewModel.updateUser(updatedUser)
             Toast.makeText(requireContext(), "Updated successfully!", Toast.LENGTH_SHORT).show()
             // navigate back
-            findNavController().navigate(R.id.action_updateFragment_to_listFragment)
+            //findNavController().navigate(R.id.action_updateFragment_to_listFragment)
+            activity?.onBackPressed()
         } else {
             Toast.makeText(requireContext(), "Please fill out all fields.", Toast.LENGTH_SHORT)
                 .show()
